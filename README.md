@@ -13,9 +13,9 @@ This is all Apple/Mac/iOS specific, obviously. I'm using Python 2.7.9; I have no
 Whereami depends on [PyiCloud](https://github.com/picklepete/pyicloud) and [w3w-python-wrapper](https://github.com/what3words/w3w-python-wrapper). You'll also need an iCloud account and an Apple device with Find My iPhone enabled. Finally, you'll want to get a what3words API key via <http://developer.what3words.com/api/>.
 
 ## Usage
-There are a couple of lines to be edited near the top of `whereami.py` to provide your Apple ID and the UUID for your device. (The PyiCloud README explains how to use the iCloud API `devices` method to discover your UUID. Note this is not the same as UDID.)
+There are a couple of lines to be edited near the top of `whereami.py` to provide your Apple ID and the UUID for your device. (The [PyiCloud README explains](https://github.com/picklepete/pyicloud#devices) how to use the iCloud API `devices` method to discover your UUID. Note this is not the same as UDID.)
 
-The script also presumes that your Apple account password and what3words API key are available as environment variables, so set those.
+The script also presumes that your Apple account password and what3words API key are available as environment variables, so set those, eh?
 
 That much should enough to allow the script to be run manually. There is also an `example_crontab` in the repository, that needs envars set properly at the top. Depending on your tastes, you might want to edit the schedule and the path to the script, as well.
 
