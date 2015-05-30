@@ -22,9 +22,9 @@ That much should enough to allow the script to be run manually. There is also an
 `whereami.html` should work as is, but you may want or need to edit inline links, title tag, etc.
 
 ## Utility
-`gps2pb.py` is small tool that grabs the JSON file and copies coordinates and w3w link to the Mac pasteboard in Markdown format. In my case, handy for providing a quick and dirty geotag to anything I happen to be working on. I keep a symlink to it in ~/bin so I can invoke it easily. You'll want to put your own URL for `gps.json` in here, as indicated in comment inline.
+`gps2pb.py` is a small tool that grabs the JSON file and copies coordinates and w3w link to the Mac pasteboard in Markdown format. In my case, handy for providing a quick and dirty geotag to anything I happen to be working on. I keep a symlink to it in ~/bin so I can invoke it easily. You'll want to put your own URL for `gps.json` in here, as indicated in comment inline.
 
-This should also, I hope, serve as an example of the general idea of how having a JSON file with my coordinates on the Internet can be interesting and useful. I also use this to fetch local weather data from <http://forecast.io>, but my coordinates in my bash prompt, etc.
+This should also, I hope, serve as an example of the general idea of how having a JSON file with my coordinates on the Internet can be interesting and useful. I also use this to fetch local weather data from <http://forecast.io>, put my coordinates in my bash prompt, etc.
 
 ## Note
 I'm publishing something here that I whipped up for my own personal use, in case it might be of wider interest. This isn't really tested or otherwise suitable in any way for prime-time or production use. "Alpha" doesn't even begin to cover it. I can't even promise that trying to use this won't injure you, your equipment, your data, or your loved ones in some way, and I can't be responsible if that happens. Also note that I included none of the `rsync` or other steps I use to put the output on a public webserver. Keep in mind that making this sort of data public as I do is not without risks—and again, if you should choose to take similar risks that is not my business.
@@ -42,3 +42,4 @@ Thanks to @what3words for their brilliant invention, and for letting me know the
 - Integrate with Twitter API to allow regular updates of profile location with w3w address
 - "Live" webservice that returns `gps.json` on request, instead of printing to static file (I'd have to host elsewhere than tilde).
 - Leverage this to automate geotagging in [Jot](https://github.com/yagermadden/jot)
+- The jQuery in `whereami.html` is kind of a hack. Since we're just parsing JSON into a simple HTML template, the python code could do this.
