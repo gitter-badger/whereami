@@ -7,6 +7,8 @@ This would be cooler if I ever went anywhere interesting. See it in operation at
 
 In particular, I am serving my location data from <http://tilde.club> which by design serves static content only—and anyway I am not interested in collecting these data at exceedingly fine granularity. So the script writes JSON to a file on disk, and I trigger it from cron every 9 minutes. I also have a HTML page (`whereami.html`) with a bit of jQuery code that parses the JSON output in the browser and presents it in a human-readable way, with links to maps.
 
+This is all Apple/Mac/iOS specific, obviously. I'm using Python 2.7.9; I have no idea if it works on other versions, but I know I didn't work in any Python 3 compatibility. :/
+
 ## Prerequisites
 Whereami depends on [PyiCloud](https://github.com/picklepete/pyicloud) and [w3w-python-wrapper](https://github.com/what3words/w3w-python-wrapper). You'll also need an iCloud account and an Apple device with Find My iPhone enabled. Finally, you'll want to get a what3words API key via <http://developer.what3words.com/api/>.
 
