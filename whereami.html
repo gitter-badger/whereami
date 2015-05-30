@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+        <title>GPS beacon</title>
+        <meta charset="utf-8" />
+
+<link rel="stylesheet" href="style.css">
+
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $.getJSON( "gps.json", function( data ) {
+          var lat = data.latitude
+          var lng = data.longitude
+          var tim = data.as_of
+          $("#wow").append("<p>As of: " + tim + "</p>")
+          var maplink = ("<a href='http://maps.google.com/maps?q=" + lat + "," + lng + "'>gmap</a>")
+          $("#wow").append("<p>"+ maplink + "</p>")
+          var w3w = data.what3words
+          $("#wow").append("<p><a href='" + w3w + "'>w3w</a></p>")
+            });
+});
+
+// });
+</script>
+</head>
+<body id="page" class="home">
+<div id="intro"><h1>According to my iPhone GPS, the recent whereabouts of <a href='#'>~me</a></h1>
+<div id="wow"></div>
+
+<div style="font-size: small;">
+<p><a href="gps.json">JSON data</a><br>
+Updates every 9 minutes</p>
+</div>
+</body>

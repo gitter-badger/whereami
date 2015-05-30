@@ -1,0 +1,8 @@
+# Example crontab
+
+# Set envars to your actual password and key values
+ICLOUDPASSWORD="secret123"
+W3W_KEY="mykey"
+
+# Run the python script every 9 minutes
+*/9 * * * * python ~/whereami/whereami.py
