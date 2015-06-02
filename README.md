@@ -41,5 +41,5 @@ Thanks to @what3words for their brilliant invention, and for letting me know the
 - Move account configuration to separate .ini or YAML file
 - Integrate with Twitter API to allow regular updates of profile location with w3w address
 - "Live" webservice that returns `gps.json` on request, instead of printing to static file (I'd have to host elsewhere than tilde).
-- Leverage this to automate geotagging in [Jot](https://github.com/yagermadden/jot)
+- ~~Leverage this to automate geotagging in [Jot](https://github.com/yagermadden/jot)~~ Done!
 - The jQuery in `whereami.html` is kind of a hack. Since we're just parsing JSON into a simple HTML template, the python code could do this.
