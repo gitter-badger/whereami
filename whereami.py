@@ -76,6 +76,8 @@ def whereami(**kwargs):
     payload = {'text': locload}
     r = requests.post(hookurl, data=json.dumps(payload))
 
+app.add_url_rule('/slack-where', view_func=slack.dispatch)
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
 
