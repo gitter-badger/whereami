@@ -20,7 +20,6 @@ pip-selfcheck.json
 # Working experiment code
 junk_drawer/
 gps.json
-what3words.py
 
 # S3krit
 .env
