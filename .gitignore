@@ -21,3 +21,8 @@ pip-selfcheck.json
 junk_drawer/
 gps.json
 what3words.py
+
+# S3krit
+.env
+.env.file
+.env.sh
