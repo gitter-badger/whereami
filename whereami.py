@@ -20,7 +20,7 @@ slack = Slack(app)
 
 slack_token = os.getenv('SLACKTOKEN')
 slack_team = os.getenv('SLACKTEAM')
-hook_url = os.getenv('HOOKURL')
+# hook_url = os.getenv('HOOKURL')
 
 # API Classes
 class WhereAmI(Resource):
@@ -65,16 +65,16 @@ api.add_resource(FullMeta,
 # Slash commands for Slackbot
 @slack.command('where', token=slack_token,
                team_id=slack_team, methods=['POST'])
-def whereami(**kwargs):
+def whereami():
     geo = provision_geo_data()['location']
     w3w = geo['w3w_url']
     words = geo['what3words']
     lat = geo['latitude']
     lng = geo['longitude']
 
-    locload = '<%s|%s>  \n%s, %s' % (w3w, words, lat, lng)
-    payload = {'text': locload}
-    r = requests.post(hookurl, data=json.dumps(payload))
+    slackloc = '<%s|%s>  \n%s, %s' % (w3w, words, lat, lng)
+    # payload = {'text': locload}
+    return slack.response(locload)
 
 app.add_url_rule('/slack-where', view_func=slack.dispatch)
 
