@@ -1,12 +1,15 @@
 @charset "utf-8";
 
+@import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+
 body {
 margin:auto;
 max-width:36em;
+padding: 1em;
 background:#ffffff;
-font: 100% 'EB Garamond', serif;
-font-size:1.25em;
-line-height: 1.5em;
+font: 150% 'Cardo', serif;
+font-size:1.5em;
+line-height: 2em;
 background: #ffffff;
 color:#333333;
 -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
@@ -15,12 +18,12 @@ color:#333333;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    font-weight: normal;
 }
 
 h1 {
     color: #000000;
-    font-size: 18px;
+    font-size: 1.5em;
 }
 
 
@@ -40,3 +43,5 @@ a, a:visited {
 
 a:hover {background-color: #F0F5F5;
          text-decoration: underline;}
+
+#wow {display: block; height: 8em;}
