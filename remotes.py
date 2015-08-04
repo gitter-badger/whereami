@@ -5,7 +5,8 @@ import os
 from time import strftime
 from datetime import datetime
 from pyicloud import PyiCloudService
-from what3words import what3words
+from what3words import What3Words
+import what3words
 import forecastio
 import json
 
@@ -35,8 +36,8 @@ def provision_geo_data():
     tim = strftime('%Y-%m-%dT%H:%M:%S')
 
     # Request what3words address based on lat, lng
-    w3w = what3words(apikey=w3wapikey)
-    res = w3w.getWords(lat=lat, lng=lng)
+    w3w = What3Words(api_key=w3wapikey)
+    res = w3w.words(lat=lat, lng=lng)
 
     # Flatten w3w response, add domain to make URL
     wordlist = res['words']
@@ -75,3 +76,7 @@ def provision_weather_data():
             }
     data = dict(g.items() + weather_data.items())
     return data
+
+if __name__ == '__main__':
+    g = provision_geo_data()
+    print json.dumps(g)

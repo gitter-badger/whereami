@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     libpq-dev \
     python-pip \
-    python-psycopg2
+    python-psycopg2 \
+    git
 
 RUN mkdir /whereami
 WORKDIR /whereami
