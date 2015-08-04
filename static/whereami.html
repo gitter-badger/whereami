@@ -19,8 +19,8 @@
           var timlin = "<p>As of: " + tim + "<br>"
           //var maplink = "<a href='http://maps.google.com/maps?q=" + lat + "," + lng + "'>gmap</a><br>"
           var map = "<iframe width=\"400\" height=\"250\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/search?q=" + lat + "," + lng + "&key=AIzaSyBuc5xoCz54ejzWOF5DOgMpeNt2F_eTEbA\"></iframe>"
-          var w3w = data.location.what3words
-          var words = w3w.replace("http://w3w.co/","")
+          var w3w = data.location.w3w_url
+          var words = data.location.what3words
           var w3wlink = "<br><a href='" + w3w + "'><img src=\"https://shots-tym.s3.amazonaws.com/cdn/w3w-pin.png\">" + words + "</a></p>"
           $("#wow").replaceWith(timlin + map + w3wlink)
             });
