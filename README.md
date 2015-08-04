@@ -3,7 +3,7 @@
 ## What, how and why
 This would be cooler if I ever went anywhere interesting.
 
-`whereami.py` is a simple xFlask (and Flask-RESTful) app that stitches together APIs from Apple's iCloud (specifically, Find My iPhone location) services and [what3words](http://what3words.com) to allow me to track and share my location, along with [Forecast.io](http://forecast.io) for weather data.
+`whereami.py` is a simple Flask (and Flask-RESTful) app that stitches together APIs from Apple's iCloud (specifically, Find My iPhone location) services and [what3words](http://what3words.com) to allow me to track and share my location, along with [Forecast.io](http://forecast.io) for weather data.
 
 This is somewhat Apple/iOS specific, obviously. (Although the app itself runs on Linux, it is connecting to iCloud API.) I'm using Python 2.7.9; I have no idea if it works on other versions, but I know I didn't work in any Python 3 compatibility. :/
 
