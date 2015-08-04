@@ -10,6 +10,9 @@ import what3words
 import forecastio
 import json
 
+# Mac OS certs: still hard (comment out before linux deploy)
+import requests
+requests.packages.urllib3.disable_warnings()
 
 # Get envars for config
 apple_id = os.getenv('APPLE_ID')
@@ -36,8 +39,8 @@ def provision_geo_data():
     tim = strftime('%Y-%m-%dT%H:%M:%S')
 
     # Request what3words address based on lat, lng
-    w3w = What3Words(api_key=w3wapikey)
-    res = w3w.words(lat=lat, lng=lng)
+    w3w = What3Words(api_key=w3wapikey, lang='pt')
+    res = w3w.words(lat=lat, lng=lng, lang='pt')
 
     # Flatten w3w response, add domain to make URL
     wordlist = res['words']
@@ -76,7 +79,3 @@ def provision_weather_data():
             }
     data = dict(g.items() + weather_data.items())
     return data
-
-if __name__ == '__main__':
-    g = provision_geo_data()
-    print json.dumps(g)
