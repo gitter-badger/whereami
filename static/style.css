@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
+
+body {
+margin:auto;
+max-width:36em;
+padding: 1em;
+background:#ffffff;
+font: 150% 'Cardo', serif;
+font-size:1.5em;
+line-height: 2em;
+background: #ffffff;
+color:#333333;
+-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+-webkit-text-size-adjust: 100%;
+ }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+h1 {
+    color: #000000;
+    font-size: 1.5em;
+}
+
+
+hr {
+    height: 1px;
+    border: 0;
+    color: #CCCCCC;
+    background-color: #CCCCCC;
+}
+
+
+a, a:visited {
+    color: #4183C4;
+    background-color: inherit;
+    text-decoration: none;
+}
+
+a:hover {background-color: #F0F5F5;
+         text-decoration: underline;}
+
+#wow {display: block; height: 8em;}
