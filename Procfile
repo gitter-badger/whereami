@@ -1,1 +1,1 @@
-web: python whereami.py
+web: gunicorn whereami:app --log-file=-
