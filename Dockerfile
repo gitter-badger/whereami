@@ -14,6 +14,7 @@ WORKDIR /whereami
 
 COPY *.py /whereami/
 RUN chmod +x /whereami/*.py
+ADD static/ /whereami/static/
 
 COPY requirements.txt /whereami/
 RUN pip install -r requirements.txt

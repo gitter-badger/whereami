@@ -39,8 +39,8 @@ def provision_geo_data():
     tim = strftime('%Y-%m-%dT%H:%M:%S')
 
     # Request what3words address based on lat, lng
-    w3w = What3Words(api_key=w3wapikey, lang='pt')
-    res = w3w.words(lat=lat, lng=lng, lang='pt')
+    w3w = What3Words(api_key=w3wapikey)
+    res = w3w.words(lat=lat, lng=lng)
 
     # Flatten w3w response, add domain to make URL
     wordlist = res['words']
@@ -79,3 +79,4 @@ def provision_weather_data():
             }
     data = dict(g.items() + weather_data.items())
     return data
+
