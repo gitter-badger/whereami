@@ -2,6 +2,7 @@
 # coding: utf-8
 
 from flask import Flask
+from flask import render_template
 from flask_restful import Resource, Api
 from flask_slack import Slack
 import os
@@ -35,6 +36,20 @@ def whereami(**kwargs):
 
     slackloc = '<%s|%s>  \n%s, %s' % (w3w, words, lat, lng)
     return slack.response(slackloc)
+
+# Whereami page
+@app.route('/whereami')
+def index():
+    data = provision_geo_data()
+    geo = data['location']
+    w3w_url = geo['w3w_url']
+    what3words = geo['what3words']
+    lat = geo['latitude']
+    lng = geo['longitude']
+    as_of = data['as_of']
+    return render_template ('whereami.html', what3words=what3words,
+        lat=lat, lng=lng, as_of=as_of, w3w_url=w3w_url)
+
 
 # API Classes
 class WhereAmI(Resource):
