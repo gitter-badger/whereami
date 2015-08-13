@@ -1,5 +1,7 @@
 # Whereami
 
+[![Join the chat at https://gitter.im/yagermadden/whereami](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/yagermadden/whereami?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## What, how and why
 This would be cooler if I ever went anywhere interesting.
 
